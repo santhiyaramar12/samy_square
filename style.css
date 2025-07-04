@@ -1,21 +1,30 @@
 /* === Global Styling === */
 * {
     font-family: Montserrat, sans-serif;
-}
-
-body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
     background: linear-gradient(to right, #f7c600, #ffcc00);
     color: #000;
-}
-
-.section-padding {
+    overflow-x: hidden;
+  }
+  
+  .section-padding {
     padding: 100px;
-}
-
-/* === Navbar === */
-/* === Navbar Styling === */
-.navbar-dark {
-    background-color: #000; /* Black background */
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .section-padding {
+      padding: 60px 20px;
+    }
+  }
+  
+  /* === Navbar === */
+  .navbar-dark {
+    background-color: #000;
   }
   
   .navbar-dark .navbar-brand {
@@ -34,20 +43,17 @@ body {
     width: auto;
   }
   
-  /* Samy Square Text Style */
   .brand-text {
-    color: #f1c40f !important;  /* Yellow */
+    color: #f1c40f !important;
     font-size: 28px;
     font-weight: 700;
     text-transform: uppercase;
   }
   
-  /* Hover Effect */
   .navbar-dark .navbar-brand:hover .brand-text {
     color: #fff !important;
   }
   
-  /* Navbar Links */
   .navbar-dark .navbar-nav .nav-link {
     color: #fff;
     font-weight: 500;
@@ -59,40 +65,40 @@ body {
     color: #f1c40f;
   }
   
-
-/* === Carousel === */
-.img-area img {
+  /* === Carousel === */
+  .img-area img {
     width: 100%;
-    height: 250px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
   }
   
-.carousel-item {
+  .carousel-item {
     height: 100vh;
     min-height: 300px;
-}
-
-.carousel-caption {
+  }
+  
+  .carousel-caption {
     bottom: 220px;
     z-index: 2;
-}
-
-.carousel-caption h5 {
+    text-align: center;
+  }
+  
+  .carousel-caption h5 {
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
-}
-
-.carousel-caption p {
+  }
+  
+  .carousel-caption p {
     width: 60%;
     margin: auto;
     font-size: 18px;
     line-height: 1.9;
-}
-
-.carousel-inner::before {
+  }
+  
+  .carousel-inner::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -101,85 +107,11 @@ body {
     left: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1;
-}
-
-.w-100 {
+  }
+  
+  .w-100 {
     height: 100vh;
-}
-
-/* === Cards === */
-.products .card {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-hover:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-}
-
-.card-body i {
-    font-size: 50px;
-}
-
-.services .card-body i {
-    font-size: 50px;
-}
-
-section {
-  scroll-margin-top: 100px; /* Same as your .section-padding or your navbar height */
-}
-html {
-    scroll-behavior: smooth;
   }
   
-  section, [id="about"], [id="products"], [id="contact"] {
-    scroll-margin-top: 100px;
-  }
+  /* === Cards === */
   
-  
-/* === Responsive === */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .carousel-caption {
-        bottom: 370px;
-    }
-
-    .carousel-caption p {
-        width: 100%;
-    }
-
-    .card {
-        margin-bottom: 30px;
-    }
-
-    .img-area img {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .carousel-caption {
-        bottom: 125px;
-    }
-
-    .carousel-caption h5 {
-        font-size: 17px;
-    }
-
-    .carousel-caption a {
-        padding: 10px 15px;
-    }
-
-    .carousel-caption p {
-        width: 100%;
-        line-height: 1.6;
-        font-size: 15px;
-    }
-}
